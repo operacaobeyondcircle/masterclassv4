@@ -884,6 +884,25 @@ strong,b{font-weight:600}
         else window.addEventListener('load',function(){setTimeout(init,0)},{once:true});
     })(window, document, "clarity", "script", "z5xv7inxbn");
 </script>
+<style>
+/* Ajuste solicitado: a fotografia fica recortada e ancorada à direita,
+   enquanto o texto ocupa a coluna própria ao lado dela. */
+.bx-hero .hero-grid{grid-template-columns:minmax(0,46%) minmax(0,54%)}
+.bx-hero .hero-copy{padding-right:5%;}
+.bx-hero .hero-art{justify-content:flex-end;}
+.bx-hero .hero-art picture{width:100%;}
+.bx-hero .hero-art picture img{object-position:76% 41%;transform:scale(1.1);transform-origin:right center;}
+@media(min-width:701px) and (max-width:870px){
+  .bx-hero .hero-grid{grid-template-columns:minmax(0,47%) minmax(0,53%);min-height:620px;}
+  .bx-hero .hero-copy{padding:38px 20px 38px 28px;}
+  .bx-hero h1.bx-headline{font-size:clamp(29px,5.5vw,43px);}
+  .bx-hero-lead{font-size:15px;}
+  .bx-hero .hero-art{min-height:620px;}
+}
+@media(max-width:700px){
+  .bx-hero .hero-art picture img{transform:none;object-position:72% 32%;}
+}
+</style>
 </head>
 <body><a class="skip-link" href="#heroTitle" id="skipToContent">Ir para o conteúdo principal</a>
 <div class="event-strip" role="note"><div class="wrap event-strip-inner"><span><b>23 NOV · 2026</b>   MASTERCLASS AO VIVO E ONLINE · 20H15</span><span>A ÚNICA EDIÇÃO AO VIVO DESTE ANO</span></div></div><header class="masthead"><div class="wrap masthead-row">
