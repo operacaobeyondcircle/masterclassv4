@@ -900,7 +900,10 @@ strong,b{font-weight:600}
   .bx-hero .hero-art{min-height:620px;}
 }
 @media(max-width:700px){
-  .bx-hero .hero-art picture img{transform:none;object-position:72% 32%;}
+  .bx-hero .hero-grid{display:flex;flex-direction:column;min-height:0;height:auto;}
+  .bx-hero .hero-art{order:1;width:100%;height:clamp(300px,88vw,392px);min-height:0;max-height:none;}
+  .bx-hero .hero-copy{order:2;width:100%;padding:19px 22px 52px;}
+  .bx-hero .hero-art picture img{transform:none;object-position:50% 32%;}
 }
 </style>
 </head>
