@@ -1109,10 +1109,12 @@ leadForm.addEventListener('submit', async e => {
  }
  const url=new URL(selectedCheckout);
  const params=new URLSearchParams(location.search);
- url.searchParams.set('ingresso',currentTicket());
- url.searchParams.set('name',$('nome').value.trim());
- url.searchParams.set('email',$('email').value.trim());
- ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(k => { if(params.get(k))url.searchParams.set(k,params.get(k)); });
+	url.searchParams.set('ingresso',currentTicket());
+	url.searchParams.set('name',$('nome').value.trim());
+	url.searchParams.set('email',$('email').value.trim());
+	url.searchParams.set('phone',$('telefone').value.trim());
+	url.searchParams.set('telefone',$('telefone').value.trim());
+	['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(k => { if(params.get(k))url.searchParams.set(k,params.get(k)); });
  if (/^https:\/\//i.test(CONFIG.webhookUrl)) {
    submitting=true; const btn=$('submitLead'); btn.disabled=true; btn.textContent='Preparando seu checkout…';
    try {
